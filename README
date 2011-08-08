@@ -1,0 +1,43 @@
+
+This is small example of the Multi Layer Perceptron implemented in Java.
+
+It can be used for educational purpose or experiments on this kind 
+of neural networks. 
+In this example the neural network will learn the XOR logical gate.
+
+This is based on some practical exercises by Jean-Baptiste Mouret
+teacher at the Institute of Intelligent Systems and Robotics in France:
+ISIR, "Université Paris 6"
+http://www.isir.upmc.fr/
+
+Jean-Baptiste Mouret's personal page at the ISIR can be found at:
+http://www.isir.upmc.fr/index.php?op=view_profil&id=72&old=N&lang=en
+
+- the 1st layer, namely the input layer is composed of 2 neurons, 
+- the 2nd layer, an hidden layer has 6 neurons,
+- the 3rd layer, namely the output layer has 1 neuron.
+
+The Neuron class represents a neuron of the neural network.
+The Layer class represents a layer of the perceptron.
+The Mlp class represents the perceptron.
+
+
+To compile, use:
+$ javac -g Mlp.java
+
+Then run Mlp:
+$ java Mlp
+
+
+A gnuplot.dat file will be generated, it contains the plot datas for
+the evolution of the quadratic error.
+
+To plot it with gnuplot, for example:
+$ gnuplot
+gnuplot> plot "plot.dat" using 1:2 with lines
+gnuplot> exit
+
+
+You can try to adjust the number of layers, neurons, the learning rate
+or the learning cycles and watch the learning accuracy.
+
